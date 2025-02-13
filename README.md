@@ -1,29 +1,50 @@
-# task_management
-1. How to run the program.
-    Clone the repository from GitHub
-    Navigate to the project folder
-    Run the program using Python 3 python3 task_manage.py
 
-2. Additional Features
+# Task Management Program
 
-    a. polymorphism - The program uses an abstract base class (TaskView) for different views like DeadlineView and PriorityView. This allows dynamic task display based on user input.
+## Overview
+This program allows users to manage tasks efficiently by providing features like adding, updating, deleting, sorting, and filtering tasks. It also supports viewing tasks based on various criteria such as deadline, priority, or status. The program is built with Python and uses SQLite for database storage.
 
-    b.  Encapsulation
+## Features
+- **Add, Update, Delete, and View Tasks:** Easily manage tasks by performing basic CRUD operations.
+- **Sort Tasks by Deadline or Priority:** Sort tasks based on urgency or priority level.
+- **Filter and Search Tasks:** Filter tasks by status or description for quick access.
+- **View Tasks Due Soon:** Identify tasks that are due within the next 24 hours.
+- **Polymorphism:** Utilizes an abstract base class (`TaskView`) for dynamic task display based on user input (e.g., `DeadlineView`, `PriorityView`).
+- **Encapsulation:** 
+  - **Data Encapsulation:** TaskManager class encapsulates database connection details (`__db_name`, `__connect`) to protect direct access.
+  - **Function Encapsulation:** Task-related operations like adding, updating, deleting, and viewing tasks are grouped in the TaskManager class, ensuring modular and organized code.
 
-        Data encapsulation: The TaskManager class encapsulates the database connection details and task management logic. The database name (__db_name) and connection method (__connect) are private, preventing direct access from outside the class.
+## Requirements
+- Python 3.x
+- SQLite (no additional installation required)
+- datetime and timedelta modules (included in Python standard library)
+- ABC (abstract base class module for polymorphism)
 
-        Function encapsulation: Task-related operations (add, update, delete, view tasks) are wrapped inside the TaskManager class, which helps in grouping these operations logically and makes the code more organized and modular.
+## Installation and Setup
+1. Clone the repository from GitHub:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd task_management
+   ```
+3. Run the program using Python 3:
+   ```bash
+   python3 task_manage.py
+   ```
 
-3. Add, update, delete, and view tasks.
+## Libraries Used
+- `datetime` and `timedelta`: For deadline calculations and time-based functionality.
+- `ABC`: To implement polymorphism and abstract base classes for different task views.
+- `SQLite`: For task storage and retrieval in a local database.
 
-4. Sort tasks by deadline or priority.
+## Usage
+Once the program is running, you'll be able to:
+- Add tasks
+- Update existing tasks
+- Delete tasks
+- View tasks based on different criteria
+- Sort tasks by deadline or priority
+- Filter tasks by status or description
 
-5. Filter and search tasks by status or description.
-
-6. View tasks due soon (within 24 hours).
-
-7. Libraries Used:
-
-    datetime and timedelta for deadline calculations.
-    ABC for polymorphism.
-    SQLite for database storage.
